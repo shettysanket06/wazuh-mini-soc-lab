@@ -27,7 +27,7 @@ flowchart LR
 
 The Wazuh server ran as an all-in-one Ubuntu Server virtual machine under VirtualBox. The Windows endpoint was separate from the VM host. The VM used NAT for outbound access and a bridged network for endpoint connectivity. Private addresses, host-specific identifiers, account names, SIDs, logon IDs, and process GUIDs have been anonymized in this public repository.
 
-See [architecture](docs/architecture.md) and [build and validation notes](docs/lab-build-and-validation.md).
+See [architecture](docs/architecture.md) and [build and validation notes](docs/build-and-validation.md).
 
 ## Tested environment snapshot
 
@@ -70,6 +70,17 @@ See [detection catalog](docs/detection-catalog.md) and [project-specific Wazuh r
 - **SCA:** A Windows 11 CIS benchmark assessment was run. Benchmark applicability is limited on Windows 11 Home Single Language; this is not a compliance attestation.
 - **Vulnerability Detection:** The recorded point-in-time inventory showed 78 findings (0 Critical, 27 High, 41 Medium, 10 Low). Reviewed updates were not installed during this test.
 
+## Evidence screenshots
+
+The [evidence directory](evidence/) contains four redacted screenshots with captions:
+
+- Vulnerability inventory and severity distribution.
+- CIS Windows 11 benchmark assessment, with its applicability limitation disclosed.
+- CVE-2026-76919 vulnerability-intelligence reference.
+- Five validated Wazuh detections from controlled endpoint tests.
+
+See the [evidence gallery and interpretation notes](evidence/README.md).
+
 ## Incident investigation reports
 
 Four controlled investigations were documented from the lab evidence and anonymized for publication:
@@ -100,7 +111,11 @@ All four were assessed as **benign, authorized lab activity**. These reports dem
 │   ├── case-003-powershell-process-execution.md
 │   └── case-004-windows-network-discovery.md
 └── evidence/
-    └── README.md
+    ├── README.md
+    ├── 01-vulnerability-overview.png
+    ├── 02-configuration-assessment.png
+    ├── 03-cve-research.png
+    └── 04-siem-detection-validation.png
 ```
 
 ## Important limitations
