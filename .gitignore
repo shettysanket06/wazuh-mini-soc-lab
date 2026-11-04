@@ -1,0 +1,37 @@
+# Secrets and credentials
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*password*
+*credential*
+*token*
+
+# Raw telemetry and captures
+*.evtx
+*.pcap
+*.pcapng
+*.log
+alerts.json
+alerts.json.*
+archives.json
+archives.json.*
+
+# Installation material and backups
+*.tar
+*.tar.gz
+*.zip
+*.backup*
+*.bak
+*.old
+ossec.conf
+ossec.conf.*
+local_rules.xml.*
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
